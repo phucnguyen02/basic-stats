@@ -17,9 +17,7 @@ public class MinMaxCalculation{
 	}
 
 	public void update(ArrayList<Double> numbers) {
-		for(double number : nums){
-			this.minimum = Math.min(this.minimum, number);
-			this.maximum = Math.max(this.maximum, number);
-		}
+		this.minimum = min(this.minimum, BasicStats.getArrayDouble(numbers));
+        this.maximum = max(this.maximum, BasicStats.getArrayDouble(numbers));
 	}
 }
